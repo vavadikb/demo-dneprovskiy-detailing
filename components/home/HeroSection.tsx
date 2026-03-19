@@ -30,8 +30,21 @@ export default function HeroSection() {
 
           {/* Left: Text */}
           <div>
+            {/* Headline */}
+            <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-[1.05] mb-6 animate-fade-up">
+              Twój samochód,
+              <br />
+              <span className="text-[#F5C518] italic">perfekcyjnie czysty.</span>
+            </h1>
+
+            {/* Subheadline */}
+            <p className="text-white/60 text-lg sm:text-xl leading-relaxed mb-6 max-w-xl animate-fade-up delay-100">
+              Profesjonalne mycie, detailing i ochrona lakieru w Warszawie.
+              Umów się online przez Booksy — szybko i wygodnie.
+            </p>
+
             {/* Badge */}
-            <div className="inline-flex items-center gap-2.5 bg-[#F5C518]/10 border border-[#F5C518]/30 rounded-full px-4 py-2 mb-8 animate-fade-up">
+            <div className="inline-flex items-center gap-2.5 bg-[#F5C518]/10 border border-[#F5C518]/30 rounded-full px-4 py-2 mb-8 animate-fade-up delay-200">
               <div className="flex gap-0.5">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} size={12} className="fill-[#F5C518] text-[#F5C518]" />
@@ -39,19 +52,6 @@ export default function HeroSection() {
               </div>
               <span className="text-white/90 text-xs font-medium">4.8 na Booksy · 200+ zadowolonych klientów</span>
             </div>
-
-            {/* Headline */}
-            <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-[1.05] mb-6 animate-fade-up delay-100">
-              Twój samochód,
-              <br />
-              <span className="text-[#F5C518] italic">perfekcyjnie czysty.</span>
-            </h1>
-
-            {/* Subheadline */}
-            <p className="text-white/60 text-lg sm:text-xl leading-relaxed mb-10 max-w-xl animate-fade-up delay-200">
-              Profesjonalne mycie, detailing i ochrona lakieru w Warszawie.
-              Umów się online przez Booksy — szybko i wygodnie.
-            </p>
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-4 mb-14 animate-fade-up delay-300">
@@ -74,7 +74,7 @@ export default function HeroSection() {
             </div>
 
             {/* Phone */}
-            <div className="flex flex-wrap gap-6 animate-fade-up delay-400">
+            <div className="flex gap-4 animate-fade-up delay-400">
               <a href="tel:512666799" className="flex items-center gap-3 group">
                 <div className="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center group-hover:bg-[#F5C518]/20 group-hover:border-[#F5C518]/40 transition-colors">
                   <Phone size={15} className="text-[#F5C518]" />
@@ -124,7 +124,7 @@ export default function HeroSection() {
             <div className="absolute -bottom-14 right-10 z-20 grid grid-cols-2 gap-3">
               {[
                 { src: "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=500&q=80", label: "Polerowanie" },
-                { src: "https://images.unsplash.com/photo-1619767886558-efdc259cde1a?auto=format&fit=crop&w=500&q=80", label: "Ceramika" },
+                { src: "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=500&q=80", label: "Ceramika" },
               ].map((item) => (
                 <div
                   key={item.label}

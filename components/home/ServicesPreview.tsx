@@ -24,7 +24,7 @@ const services = [
   {
     title: "Pranie Tapicerki",
     description: "Profesjonalne pranie wnętrza: siedzenia, dywaniki, podsufitka i więcej.",
-    photo: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80",
+    photo: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80",
     price: "od 800 zł",
   },
   {

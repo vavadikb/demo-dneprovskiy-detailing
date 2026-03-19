@@ -1,5 +1,8 @@
 import Link from "next/link";
-import { Phone, MapPin, Clock, Calendar } from "lucide-react";
+import { Phone, MapPin, Clock, Calendar, Instagram, Facebook } from "lucide-react";
+
+const INSTAGRAM_URL = "https://www.instagram.com/dneprovskiy_detailing/";
+const FACEBOOK_URL = "https://www.facebook.com/p/Dneprovskiy-detailing-61571768501435/";
 
 const BOOKSY_URL =
   "https://booksy.com/pl-pl/264688_dneprovskiy-detailing-myjnia_motoryzacja_3_warszawa?rwg_token=AFd1xnHgjkoWY3cFoyTN28hU52IWD0tqiwXdtTXk654lsuJXlJcHz_cwpcmb6bq1XKfN_XNoqcIvUFH0vamPNs4AET9WMKQHZA%3D%3D#ba_s=seo";
@@ -30,6 +33,26 @@ export default function Footer() {
               <Calendar size={14} />
               Zarezerwuj wizytę
             </a>
+            <div className="flex items-center gap-3 mt-5">
+              <a
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-full border border-white/15 hover:border-[#F5C518]/50 flex items-center justify-center text-white/50 hover:text-[#F5C518] transition-all duration-200"
+                aria-label="Instagram"
+              >
+                <Instagram size={16} />
+              </a>
+              <a
+                href={FACEBOOK_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-full border border-white/15 hover:border-[#F5C518]/50 flex items-center justify-center text-white/50 hover:text-[#F5C518] transition-all duration-200"
+                aria-label="Facebook"
+              >
+                <Facebook size={16} />
+              </a>
+            </div>
           </div>
 
           {/* Quick links */}
@@ -123,7 +146,14 @@ export default function Footer() {
       <div className="border-t border-white/8">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/30">
           <p>© {new Date().getFullYear()} Dneprovskiy Detailing. Wszelkie prawa zastrzeżone.</p>
-          <p>Towarowa 30, 00-868 Warszawa</p>
+          <div className="flex items-center gap-4">
+            <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="hover:text-[#F5C518] transition-colors flex items-center gap-1.5">
+              <Instagram size={13} /> Instagram
+            </a>
+            <a href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer" className="hover:text-[#F5C518] transition-colors flex items-center gap-1.5">
+              <Facebook size={13} /> Facebook
+            </a>
+          </div>
         </div>
       </div>
     </footer>

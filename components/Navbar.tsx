@@ -3,10 +3,12 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Phone, Calendar } from "lucide-react";
+import { Menu, X, Phone, Calendar, Instagram, Facebook } from "lucide-react";
 
 const BOOKSY_URL =
   "https://booksy.com/pl-pl/264688_dneprovskiy-detailing-myjnia_motoryzacja_3_warszawa?rwg_token=AFd1xnHgjkoWY3cFoyTN28hU52IWD0tqiwXdtTXk654lsuJXlJcHz_cwpcmb6bq1XKfN_XNoqcIvUFH0vamPNs4AET9WMKQHZA%3D%3D#ba_s=seo";
+const INSTAGRAM_URL = "https://www.instagram.com/dneprovskiy_detailing/";
+const FACEBOOK_URL = "https://www.facebook.com/p/Dneprovskiy-detailing-61571768501435/";
 
 const navLinks = [
   { href: "/", label: "Start" },
@@ -29,7 +31,7 @@ export default function Navbar() {
 
   const navBg =
     scrolled || !isHome
-      ? "bg-[#0a0a0a] border-b border-white/8 shadow-lg shadow-black/40"
+      ? "bg-[#0a0a0a] shadow-lg shadow-black/40"
       : "bg-transparent";
 
   const linkColor =
@@ -71,6 +73,25 @@ export default function Navbar() {
 
           {/* CTA */}
           <div className="hidden lg:flex items-center gap-4">
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="text-white/50 hover:text-[#F5C518] transition-colors"
+            >
+              <Instagram size={17} />
+            </a>
+            <a
+              href={FACEBOOK_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              className="text-white/50 hover:text-[#F5C518] transition-colors"
+            >
+              <Facebook size={17} />
+            </a>
+            <span className="w-px h-4 bg-white/15" />
             <a
               href="tel:512666799"
               className="flex items-center gap-1.5 text-sm font-medium text-white/70 hover:text-white transition-colors"

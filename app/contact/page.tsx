@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
-import { Calendar, Clock, MapPin, Phone } from "lucide-react";
+import { Calendar, Clock, MapPin, Phone, Instagram, Facebook } from "lucide-react";
+
+const INSTAGRAM_URL = "https://www.instagram.com/dneprovskiy_detailing/";
+const FACEBOOK_URL = "https://www.facebook.com/p/Dneprovskiy-detailing-61571768501435/";
 
 export const metadata: Metadata = {
   title: "Kontakt | Dneprovskiy Detailing Warszawa",
@@ -101,6 +104,34 @@ export default function ContactPage() {
               <h2 className="font-serif text-2xl font-bold text-white mb-2">Godziny</h2>
               <p className="text-white/60 text-sm leading-relaxed">Pon-Sob: 8:00-20:00</p>
               <p className="text-white/60 text-sm leading-relaxed">Niedziela: zamknięte</p>
+            </div>
+          </div>
+
+          {/* Social media */}
+          <div className="mt-6 bg-[#0a0a0a] border border-white/10 rounded-2xl p-6 flex flex-col sm:flex-row items-start sm:items-center gap-6">
+            <div className="flex-1">
+              <h2 className="font-serif text-xl font-bold text-white mb-1">Obserwuj nas</h2>
+              <p className="text-white/50 text-sm">Zdjęcia realizacji, porady i aktualności ze studia.</p>
+            </div>
+            <div className="flex items-center gap-3">
+              <a
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 border border-white/15 hover:border-[#F5C518]/50 hover:bg-[#F5C518]/5 text-white/70 hover:text-[#F5C518] text-sm font-medium px-5 py-2.5 rounded-full transition-all duration-200"
+              >
+                <Instagram size={16} />
+                Instagram
+              </a>
+              <a
+                href={FACEBOOK_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 border border-white/15 hover:border-[#F5C518]/50 hover:bg-[#F5C518]/5 text-white/70 hover:text-[#F5C518] text-sm font-medium px-5 py-2.5 rounded-full transition-all duration-200"
+              >
+                <Facebook size={16} />
+                Facebook
+              </a>
             </div>
           </div>
         </div>
